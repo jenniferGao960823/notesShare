@@ -1,0 +1,15 @@
+跨域处理：
+1.代理  node-http-proxy
+2.jsonp  get方式
+3.设置相应请求头
+router/app.all("*",(req,res,next)=>{
+    // 允许所有域名进行访问
+    res.header("Access-Control-Allow-Origin","*")
+    // 定义内容类型
+    res.header("Access-Control-Allow-Headers","content-type")
+    // 允许访问类型
+    res.header("Access-Control-Allow-Methods","GET","POST","PUT","PATCH","DELETE","OPTIONS")
+    // 进行判断
+    next()
+})
+4.cors  get post
