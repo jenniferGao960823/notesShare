@@ -1,0 +1,19 @@
+nodemon  热重载-》  node中的启动工具、
+下载npm install nodemon --save
+在package.json 在"scripts"中添加"dev":"npm start"
+启动方式：在cmd中输入=》nodemon 文件名
+
+supervisor  和nodemon一样
+
+脚手架：(生成器)  可以理解为一个毛坯房
+1、npm install express-generator -g 安装express脚手架
+express --version 查看版本
+2、express --view=ejs app 创建一个app文件夹  文件名可以更改
+3、cd app 进入app目录
+4、npm i  安装依赖          生成node-modules文件夹
+5、SET DEBUG=app:* & npm start  运行app
+
+
+!!!给别人发项目不要把node-modules放进去，不但使项目很大，执行时还会报错
+
+npm run dev 用node执行一个文件的简洁方式，需要在package.json中的scripts里写入dev的路径
